@@ -451,6 +451,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
         ListaOrdenada.pop_front();
 
         if(VerticeActual == destino){
+            cout<<"Costo: "<<CostoActual<<endl;
             band2 = 1;
             DestinoActual = destino;
 
