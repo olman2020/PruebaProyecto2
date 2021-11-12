@@ -441,7 +441,7 @@ bool Comparacion(pair<Vertice*, int> a, pair<Vertice*, int> b){
 void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 {
 
-    int CostoActual = 0, band, band2 = 0, CostoMenor = 0;
+    int CostoActual = 0, band, band2 = 0, CostoMenor = 1000;
     Vertice *VerticeActual, *DestinoActual;
     Arista *aux;
     typedef pair<Vertice*, int> VerticeCosto;
@@ -530,7 +530,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
                 pila.push(VerticeVertice(VerticeActual, aux->ady));
                 CostoActual = CostoActual -aux->peso;
                 if (aux->peso != 0)
-                    if (CostoMenor < aux->peso)
+                    if (CostoMenor > aux->peso)
                         CostoMenor = aux->peso;
 
 

@@ -111,8 +111,8 @@ void MainWindow::on_crearBoton_clicked()
         ui->VCaAZG4->setText(QString::number(A6));
 
 
-        //QPixmap g4("C:/Users/Isaac/Documents/GitHub/PruebaProyecto2/prueba/Img/grafo4.png");
-        QPixmap g4("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo4.png");
+        QPixmap g4("C:/Users/Isaac/Documents/GitHub/PruebaProyecto2/prueba/Img/grafo4.png");
+        //QPixmap g4("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo4.png");
         ui->label_2->setPixmap(g4);
         break;
         }

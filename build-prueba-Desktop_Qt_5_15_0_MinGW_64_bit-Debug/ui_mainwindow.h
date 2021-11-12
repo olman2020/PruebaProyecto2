@@ -404,7 +404,7 @@ public:
         titulo->setText(QCoreApplication::translate("MainWindow", "RENT A CAR", nullptr));
         cantidad->setText(QString());
         ingresar->setText(QCoreApplication::translate("MainWindow", "Ingresar la cantidad de vertices que desea en el grafo\n"
-"(Se permite de 4 a 10 vertices) ", nullptr));
+"(Se permite de 4 a 8 vertices) ", nullptr));
         crearBoton->setText(QCoreApplication::translate("MainWindow", "Crear Grafo", nullptr));
         label_2->setText(QString());
         ciudaddestinoL->setText(QCoreApplication::translate("MainWindow", "Ciudad de Destino", nullptr));
