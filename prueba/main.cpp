@@ -13,9 +13,7 @@ int main(int argc, char *argv[])
     w.show();
     return a.exec();
 
-    //Grafo G;
-    //G.Inicializa();
-    //int opc;
+
 
 
 

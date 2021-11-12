@@ -2,6 +2,14 @@
 #include <queue>
 #include <list>
 #include <stack>
+#include <QtDebug>
+#include <cmath>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "grafowindow.h"
+#include "grafo.h"
+
+
 
 void Grafo::Inicializa()
 {
@@ -432,7 +440,8 @@ bool Comparacion(pair<Vertice*, int> a, pair<Vertice*, int> b){
 
 void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 {
-    int CostoActual = 0, band, band2 = 0, CostoMenor = 10000;
+
+    int CostoActual = 0, band, band2 = 0, CostoMenor = 0;
     Vertice *VerticeActual, *DestinoActual;
     Arista *aux;
     typedef pair<Vertice*, int> VerticeCosto;
@@ -451,13 +460,19 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
         ListaOrdenada.pop_front();
 
         if(VerticeActual == destino){
-            cout<<"Costo: "<<CostoActual<<endl;
-            cout<<"Costo minimo:"<<CostoMenor<<endl;
+            //cout<<"Costo: "<<CostoActual<<endl;
+            MainWindow().ui->TablaResultados->setText("Costo: "+QString::number(CostoActual));
+            qDebug() <<"Costo: "<<CostoActual<<Qt::endl;
+            //cout<<"Costo minimo:"<<CostoMenor<<endl;
+
+            qDebug()<<"Costo minimo:"<<CostoMenor<<Qt::endl;
             band2 = 1;
             DestinoActual = destino;
 
             while (!pila.empty()) {
-                cout<<DestinoActual->nombre<<"<-";
+                //cout<<DestinoActual->nombre<<"<-";
+
+                qDebug() <<QString::fromStdString(DestinoActual->nombre)<<"<-";
 
                 while (!pila.empty() && pila.top().second != DestinoActual) {
                     pila.pop();
@@ -477,6 +492,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 
 
 
+
             for(i=ListaCostos.begin(); i!=ListaCostos.end(); i++){
 
                 if(aux->ady == i->first){
@@ -490,6 +506,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 
 
                         for(j=ListaOrdenada.begin(); j!=ListaOrdenada.end(); j++){
+
                             if(j->first == aux->ady){
                                 (*j).second = CostoActual;
 
@@ -498,6 +515,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
                         ListaOrdenada.sort(Comparacion);
                         pila.push(VerticeVertice(VerticeActual, aux->ady));
                         CostoActual = CostoActual - aux->peso;
+
 
 
                     }
@@ -512,8 +530,9 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
                 pila.push(VerticeVertice(VerticeActual, aux->ady));
                 CostoActual = CostoActual -aux->peso;
                 if (aux->peso != 0)
-                    if (CostoMenor > aux->peso)
+                    if (CostoMenor < aux->peso)
                         CostoMenor = aux->peso;
+
 
             }
 
@@ -522,6 +541,8 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
         }
 
     }
+
+
 
     if(band2 == 0){
         cout<<"No hay ruta entre esos dos vertices"<<endl;
