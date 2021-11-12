@@ -109,7 +109,7 @@ public:
     QLabel *VOaAMG8;
     QLabel *MaAMG8;
     QLabel *RaLG8;
-    QLineEdit *TablaResultados;
+    QLabel *TablaResultados;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -385,9 +385,9 @@ public:
         RaLG8 = new QLabel(centralwidget);
         RaLG8->setObjectName(QString::fromUtf8("RaLG8"));
         RaLG8->setGeometry(QRect(660, 60, 47, 13));
-        TablaResultados = new QLineEdit(centralwidget);
+        TablaResultados = new QLabel(centralwidget);
         TablaResultados->setObjectName(QString::fromUtf8("TablaResultados"));
-        TablaResultados->setGeometry(QRect(510, 350, 311, 71));
+        TablaResultados->setGeometry(QRect(450, 530, 361, 81));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -404,7 +404,7 @@ public:
         titulo->setText(QCoreApplication::translate("MainWindow", "RENT A CAR", nullptr));
         cantidad->setText(QString());
         ingresar->setText(QCoreApplication::translate("MainWindow", "Ingresar la cantidad de vertices que desea en el grafo\n"
-"(Se permite de 7 a 15 vertices) ", nullptr));
+"(Se permite de 4 a 10 vertices) ", nullptr));
         crearBoton->setText(QCoreApplication::translate("MainWindow", "Crear Grafo", nullptr));
         label_2->setText(QString());
         ciudaddestinoL->setText(QCoreApplication::translate("MainWindow", "Ciudad de Destino", nullptr));
@@ -486,6 +486,7 @@ public:
         VOaAMG8->setText(QString());
         MaAMG8->setText(QString());
         RaLG8->setText(QString());
+        TablaResultados->setText(QString());
     } // retranslateUi
 
 };

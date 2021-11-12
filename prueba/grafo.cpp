@@ -440,7 +440,7 @@ bool Comparacion(pair<Vertice*, int> a, pair<Vertice*, int> b){
 
 void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 {
-    QLineEdit *TablaResultados = new QLineEdit();
+
     int CostoActual = 0, band, band2 = 0, CostoMenor = 0;
     Vertice *VerticeActual, *DestinoActual;
     Arista *aux;
@@ -461,7 +461,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 
         if(VerticeActual == destino){
             //cout<<"Costo: "<<CostoActual<<endl;
-
+            MainWindow().ui->TablaResultados->setText("Costo: "+QString::number(CostoActual));
             qDebug() <<"Costo: "<<CostoActual<<Qt::endl;
             //cout<<"Costo minimo:"<<CostoMenor<<endl;
 
@@ -492,6 +492,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 
 
 
+
             for(i=ListaCostos.begin(); i!=ListaCostos.end(); i++){
 
                 if(aux->ady == i->first){
@@ -505,6 +506,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 
 
                         for(j=ListaOrdenada.begin(); j!=ListaOrdenada.end(); j++){
+
                             if(j->first == aux->ady){
                                 (*j).second = CostoActual;
 
@@ -513,6 +515,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
                         ListaOrdenada.sort(Comparacion);
                         pila.push(VerticeVertice(VerticeActual, aux->ady));
                         CostoActual = CostoActual - aux->peso;
+
 
 
                     }
@@ -528,7 +531,7 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
                 CostoActual = CostoActual -aux->peso;
                 if (aux->peso != 0)
                     if (CostoMenor < aux->peso)
-                        CostoMenor = abs(CostoActual - aux->peso);
+                        CostoMenor = aux->peso;
 
 
             }
@@ -538,6 +541,8 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
         }
 
     }
+
+
 
     if(band2 == 0){
         cout<<"No hay ruta entre esos dos vertices"<<endl;

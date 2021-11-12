@@ -65,7 +65,7 @@
     </property>
     <property name="text">
      <string>Ingresar la cantidad de vertices que desea en el grafo
-(Se permite de 7 a 15 vertices) </string>
+(Se permite de 4 a 8 vertices) </string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1134,6 +1134,19 @@
       <y>60</y>
       <width>47</width>
       <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TablaResultados">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>530</y>
+      <width>361</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="text">
