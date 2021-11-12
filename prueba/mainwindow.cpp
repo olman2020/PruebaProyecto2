@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent):
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap g5("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo8.png");
+    QPixmap g5("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo9.png");
     ui->label_2->setPixmap(g5);
 }
 
