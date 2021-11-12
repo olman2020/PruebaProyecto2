@@ -19,6 +19,8 @@ private slots:
 
     void on_crearBoton_clicked();
 
+    void on_ciudadesBoton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

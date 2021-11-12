@@ -155,7 +155,7 @@
    <widget class="QPushButton" name="ciudadesBoton">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>80</x>
       <y>380</y>
       <width>111</width>
       <height>31</height>
@@ -165,7 +165,7 @@
      <string>Registrar Ciudades</string>
     </property>
    </widget>
-   <widget class="QLabel" name="AzulG4">
+   <widget class="QLabel" name="E3">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -656,7 +656,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="LilaG7">
@@ -669,7 +669,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="VerdeOscuroG7">
@@ -682,7 +682,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="NaranjaG7">
@@ -695,7 +695,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="AzulG7">
@@ -708,7 +708,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="RojoG7">
@@ -721,7 +721,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="MoradoG7">
@@ -734,7 +734,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="VOaNG7">
@@ -747,14 +747,378 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="NaRG7">
     <property name="geometry">
      <rect>
-      <x>690</x>
+      <x>660</x>
       <y>120</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AMaVOG7">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>190</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LaAZG7">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>270</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MaAZ">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>290</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RaMG7">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>260</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AMaLG7">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>340</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AZaAMG7">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>230</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RaAZG7">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>210</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VOaRG7">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>150</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VerdeClaroG8">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>200</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="NaranjaG8">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>90</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AzulG8">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>340</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AmarilloG8">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>210</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MoradoG8">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>340</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RojoG8">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>90</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LilaG8">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>90</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VerdeOscuroG8">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>230</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AMaAZG8">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>290</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VCaMG8">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>240</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AMaVCG8">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>190</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AZaVOG8">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>320</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="NaAMG8">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>140</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RaNG8">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>70</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AMaRG8">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>140</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VOaMG8">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>300</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LaVOG">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>150</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VOaRG8">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>140</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="VOaAMG8">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>200</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MaAMG8">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>240</y>
       <width>47</width>
       <height>13</height>
      </rect>
