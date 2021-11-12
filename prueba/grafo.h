@@ -41,5 +41,6 @@ public:
     void PrimeroMejor(Vertice *origen, Vertice *destino);
 
 
+
 };
 #endif // GRAFO_H

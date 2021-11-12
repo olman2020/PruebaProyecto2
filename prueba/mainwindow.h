@@ -16,7 +16,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     Grafo G;
-
+    Ui::MainWindow *ui;
 
 private slots:
 
@@ -27,6 +27,6 @@ private slots:
     void on_ciudadesBoton_windowIconTextChanged(const QString &iconText);
 
 private:
-    Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H

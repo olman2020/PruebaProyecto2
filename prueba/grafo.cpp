@@ -3,6 +3,13 @@
 #include <list>
 #include <stack>
 #include <QtDebug>
+#include <cmath>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "grafowindow.h"
+#include "grafo.h"
+
+
 
 void Grafo::Inicializa()
 {
@@ -433,6 +440,7 @@ bool Comparacion(pair<Vertice*, int> a, pair<Vertice*, int> b){
 
 void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 {
+    QLineEdit *TablaResultados = new QLineEdit();
     int CostoActual = 0, band, band2 = 0, CostoMenor = 0;
     Vertice *VerticeActual, *DestinoActual;
     Arista *aux;
@@ -453,14 +461,17 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 
         if(VerticeActual == destino){
             //cout<<"Costo: "<<CostoActual<<endl;
+
             qDebug() <<"Costo: "<<CostoActual<<Qt::endl;
             //cout<<"Costo minimo:"<<CostoMenor<<endl;
+
             qDebug()<<"Costo minimo:"<<CostoMenor<<Qt::endl;
             band2 = 1;
             DestinoActual = destino;
 
             while (!pila.empty()) {
                 //cout<<DestinoActual->nombre<<"<-";
+
                 qDebug() <<QString::fromStdString(DestinoActual->nombre)<<"<-";
 
                 while (!pila.empty() && pila.top().second != DestinoActual) {
@@ -517,7 +528,8 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
                 CostoActual = CostoActual -aux->peso;
                 if (aux->peso != 0)
                     if (CostoMenor < aux->peso)
-                        CostoMenor = aux->peso;
+                        CostoMenor = abs(CostoActual - aux->peso);
+
 
             }
 
