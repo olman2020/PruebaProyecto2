@@ -5,10 +5,12 @@
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),
     ui(new Ui::MainWindow)
+
 {
     ui->setupUi(this);
-    QPixmap g5("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo7.png");
-    ui->label_2->setPixmap(g5);
+    //QPixmap g5("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo7.png");
+    //ui->label_2->setPixmap(g5);
+
 }
 
 MainWindow::~MainWindow()
@@ -19,7 +21,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_crearBoton_clicked()
 {
-    Grafo G;
+
+    //Grafo G;
     G.Inicializa();
 
 
@@ -78,7 +81,11 @@ void MainWindow::on_crearBoton_clicked()
     int A20 = 50+rand()%(100-1);
 
     QString tgrafo = ui->cantidad->text();
+    QString torigen = ui->ciudadSalida->text();
+    QString tdestino = ui->ciudadDestino->text();
     long int tipo = tgrafo.toInt();
+    string origen = torigen.toStdString();
+    string destino = tdestino.toStdString();
     switch(tipo)
     {
     case 4: {
@@ -94,10 +101,25 @@ void MainWindow::on_crearBoton_clicked()
         G.InsertaArista(G.GetVertice(E4), G.GetVertice(E1), A5);
         G.InsertaArista(G.GetVertice(E4), G.GetVertice(E3), A6);
 
+        ui->AzulG4->setText(QString::fromStdString(E3));
+        ui->NaranjaG4->setText(QString::fromStdString(E1));
+        ui->RojoG4->setText(QString::fromStdString(E2));
+        ui->VerdeClaroG4->setText(QString::fromStdString(E4));
+
+        ui->NaRG4->setText(QString::number(A1));
+        ui->RaVCG4->setText(QString::number(A2));
+        ui->RaAZG4->setText(QString::number(A3));
+        ui->AZaNG4->setText(QString::number(A4));
+        ui->VCaNG4->setText(QString::number(A5));
+        ui->VCaAZG4->setText(QString::number(A6));
+
+
         QPixmap g4("C:/Users/Isaac/Documents/GitHub/PruebaProyecto2/prueba/Img/grafo4.png");
         //QPixmap g4("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo4.png");
         ui->label_2->setPixmap(g4);
-
+        if(torigen != NULL and tdestino != NULL){
+            G.PrimeroMejor(G.GetVertice(origen), G.GetVertice(destino));
+        }
         break;
         }
     case 5: {QPixmap g5("C:/Users/igarz/OneDrive/Documentos/PruebaProyecto2/prueba/Img/grafo5.png");
@@ -127,4 +149,20 @@ void MainWindow::on_crearBoton_clicked()
     }
 
 }
+
+
+void MainWindow::on_ciudadesBoton_clicked()
+{
+
+    QString torigen = ui->ciudadSalida->text();
+    QString tdestino = ui->ciudadDestino->text();
+    string origen = torigen.toStdString();
+    string destino = tdestino.toStdString();
+    if(torigen != NULL and tdestino != NULL){
+        G.PrimeroMejor(G.GetVertice(origen), G.GetVertice(destino));
+    }
+}
+
+
+
 
