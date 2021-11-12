@@ -432,7 +432,7 @@ bool Comparacion(pair<Vertice*, int> a, pair<Vertice*, int> b){
 
 void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
 {
-    int CostoActual = 0, band, band2 = 0;
+    int CostoActual = 0, band, band2 = 0, CostoMenor = 10000;
     Vertice *VerticeActual, *DestinoActual;
     Arista *aux;
     typedef pair<Vertice*, int> VerticeCosto;
@@ -451,6 +451,8 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
         ListaOrdenada.pop_front();
 
         if(VerticeActual == destino){
+            cout<<"Costo: "<<CostoActual<<endl;
+            cout<<"Costo minimo:"<<CostoMenor<<endl;
             band2 = 1;
             DestinoActual = destino;
 
@@ -473,36 +475,55 @@ void Grafo::PrimeroMejor(Vertice *origen, Vertice *destino)
             band = 0;
             CostoActual = CostoActual + aux->peso;
 
+
+
             for(i=ListaCostos.begin(); i!=ListaCostos.end(); i++){
+
                 if(aux->ady == i->first){
                     band = 1;
+
+
                     if(CostoActual < i->second){
                         (*i).second = CostoActual;
+
+
+
 
                         for(j=ListaOrdenada.begin(); j!=ListaOrdenada.end(); j++){
                             if(j->first == aux->ady){
                                 (*j).second = CostoActual;
+
                             }
                         }
                         ListaOrdenada.sort(Comparacion);
                         pila.push(VerticeVertice(VerticeActual, aux->ady));
                         CostoActual = CostoActual - aux->peso;
+
+
                     }
                 }
             }
 
             if(band == 0){
+
                 ListaCostos.push_back(VerticeCosto(aux->ady, CostoActual));
                 ListaOrdenada.push_back(VerticeCosto(aux->ady, CostoActual));
                 ListaOrdenada.sort(Comparacion);
                 pila.push(VerticeVertice(VerticeActual, aux->ady));
                 CostoActual = CostoActual -aux->peso;
+                if (aux->peso != 0)
+                    if (CostoMenor > aux->peso)
+                        CostoMenor = aux->peso;
+
             }
 
             aux = aux->sig;
+
         }
-        if(band2 == 0){
-            cout<<"No hay ruta entre esos dos vertices"<<endl;
-        }
+
+    }
+
+    if(band2 == 0){
+        cout<<"No hay ruta entre esos dos vertices"<<endl;
     }
 }
